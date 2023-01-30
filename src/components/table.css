@@ -1,11 +1,9 @@
-
 .row {
   border: 2px solid black;
   border-collapse: collapse;
 
   display: flex;
   flex-flow: row wrap;
-  /* flex-wrap: wrap; */
 }
 
 a,

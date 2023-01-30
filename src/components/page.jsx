@@ -8,9 +8,7 @@ const Page = ({ URL, login, entityType }) => {
   const [tableHeadRow, setTableHeadRow] = useState([]);
   const [tableData, setTableData] = useState({});
 
-  const [city, setCity] = useState();
   const [site, setSite] = useState();
-  const [entity, setEntity] = useState();
 
   useEffect(() => {
     Papa.parse(URL, {
@@ -26,7 +24,7 @@ const Page = ({ URL, login, entityType }) => {
           data[j] = ["NA"];
         }
 
-        for (let i = 1; i < results.data.length; i++) {
+        for (let i = 0; i < results.data.length; i++) {
           for (let j in results.data[i]) {
             data[j].push(results.data[i][j]);
           }
@@ -37,17 +35,14 @@ const Page = ({ URL, login, entityType }) => {
   }, []);
 
   const filterOptions = (table, filteredIndex, filteredValue) =>
-    !filteredValue || !filteredIndex || filteredValue === "NA"
+    !filteredValue || !filteredIndex
       ? table
       : table.filter((option) => option[filteredIndex] === filteredValue);
 
   const getOptions = (table, filteredIndex, filteredValue) =>
-    filterOptions(
-      filterOptions(table, filteredIndex[0], filteredValue[0]),
-      filteredIndex[1],
-      filteredValue[1]
-    );
+    filterOptions(table, filteredIndex[0], filteredValue[0]);
 
+  console.log(tableData["Site Name"]);
   return (
     <div className="App">
       <h1>{entityType}</h1>
@@ -60,16 +55,14 @@ const Page = ({ URL, login, entityType }) => {
             setInputValue={setSite}
           />
 
-          {getOptions(table, ["Entity Type", "Site Name"], [entity, site]).map(
-            (options, i) => (
-              <Display
-                key={i}
-                options={options}
-                tableHeadRow={tableHeadRow}
-                i={i}
-              />
-            )
-          )}
+          {site && getOptions(table, ["Site Name"], [site]).map((options, i) => (
+            <Display
+              key={i}
+              options={options}
+              tableHeadRow={tableHeadRow}
+              i={i}
+            />
+          ))}
         </>
       )}
     </div>
