@@ -13,7 +13,7 @@ const Table = ({ title, data, j, tableHeadRow }) => {
       <div className="row">
         <span className="col column1">{tableHeadRow[j]} :</span>
         {isLink(data) ? (
-          <a href={data} target="-blank">
+          <a href={data} target="-_blank">
             <span className="col column2">Link</span>
           </a>
         ) : (
