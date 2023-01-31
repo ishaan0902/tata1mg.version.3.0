@@ -4,9 +4,9 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 const URL1 =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7oLcX-viOSwVfc-bGPcF0ZBHyzO5EncSP4T7xmgMznLSwZMVwNUW6y9Z0tUTYtS0Wtbyk67hxHkUk/pub?gid=1326264409&single=true&output=csv";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSXDq19mKO_Pix7LkoMWbMvjyBFXRAVlU1SyaSQcaR7rRYGpZHlxtOdnk_UZwVOWP8qYmV3eMzFDHHn/pub?gid=320158997&single=true&output=csv";
 const URL2 =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7oLcX-viOSwVfc-bGPcF0ZBHyzO5EncSP4T7xmgMznLSwZMVwNUW6y9Z0tUTYtS0Wtbyk67hxHkUk/pub?gid=1847454951&single=true&output=csv";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSXDq19mKO_Pix7LkoMWbMvjyBFXRAVlU1SyaSQcaR7rRYGpZHlxtOdnk_UZwVOWP8qYmV3eMzFDHHn/pub?gid=1004807472&single=true&output=csv";
 
 function App() {
   const [login, setLogin] = useState(false);
