@@ -46,7 +46,7 @@ function App() {
           <button onClick={() => setOption(!option)}>T1MGHC</button>
           <button onClick={() => setOption(!option)}>LFS</button>
 
-          {!option && <Page URL={URL1} login={login} entityType="T1MGHCM" />}
+          {!option && <Page URL={URL1} login={login} entityType="T1MGHC" />}
           {option && <Page URL={URL2} login={login} entityType="LFS" />}
         </>
       )}
