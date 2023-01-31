@@ -4,9 +4,9 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 const URL1 =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vR7p91mdEj3E7UcmAjwFpcE1evDLh6T5J1IWMJ1TR0tSV7Tyue4m0CKLj84R3PcbgMz6d-Krmziszj_/pub?gid=919346490&single=true&output=csv";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7oLcX-viOSwVfc-bGPcF0ZBHyzO5EncSP4T7xmgMznLSwZMVwNUW6y9Z0tUTYtS0Wtbyk67hxHkUk/pub?gid=1326264409&single=true&output=csv";
 const URL2 =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vR7p91mdEj3E7UcmAjwFpcE1evDLh6T5J1IWMJ1TR0tSV7Tyue4m0CKLj84R3PcbgMz6d-Krmziszj_/pub?gid=122819438&single=true&output=csv";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7oLcX-viOSwVfc-bGPcF0ZBHyzO5EncSP4T7xmgMznLSwZMVwNUW6y9Z0tUTYtS0Wtbyk67hxHkUk/pub?gid=1847454951&single=true&output=csv";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -43,11 +43,11 @@ function App() {
 
       {login && (
         <>
-          <button onClick={() => setOption(!option)}>TM</button>
-          <button onClick={() => setOption(!option)}>LH</button>
+          <button onClick={() => setOption(!option)}>T1MGHC</button>
+          <button onClick={() => setOption(!option)}>LFS</button>
 
-          {!option && <Page URL={URL1} login={login} entityType="TM" />}
-          {option && <Page URL={URL2} login={login} entityType="LH" />}
+          {!option && <Page URL={URL1} login={login} entityType="T1MGHCM" />}
+          {option && <Page URL={URL2} login={login} entityType="LFS" />}
         </>
       )}
     </div>
